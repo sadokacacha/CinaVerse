@@ -1,0 +1,23 @@
+.Menu_Container {
+/*   position: absolute;
+ */  color: var(--main-color);
+
+}
+
+.HeroImg {
+    background-image: url(/src/assets/hero-bg.jpg) ;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0 ;
+    left: 0 ; 
+    height: 100vh;
+    z-index: -1 ;
+    width: 100%;
+}
+
+
+.HeroImg_container-info {
+    margin-top: 100px;
+    max-width: 600px; 
+}

@@ -1,0 +1,118 @@
+.NavBar_container {
+  display: flex;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.59) 0%,
+    rgba(0, 0, 0, 0.399) 35%,
+    rgba(0, 0, 0, 0) 100% 
+    
+  );
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  
+
+}
+
+.NavBar_container .NavBar_site-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.NavBar_container .NavBar_input-Warpper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.NavBar_container .NavBar_site-logo {
+  padding-left: 10px;
+}
+
+.NavBar_container .NavBar_search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.NavBar_container .NavBar_search-form input {
+  background-color: transparent;
+  color: var(--main-color);
+  border-radius: 6px;
+  border: 1px solid var(--main-color);
+  padding-right: 30px;
+  padding: 5px;
+}
+
+.NavBar_container .NavBar_search-form input:active {
+  border-radius: 6px;
+  border: 1px solid var(--main-color);
+  outline: none;
+}
+.NavBar_container .NavBar_search-form input:focus {
+  outline: none;
+}
+
+.icons {
+  color: var(--main-color);
+}
+
+.search_icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 85px;
+}
+
+.NavBar_container .NavBar_search-form .NavBar_search-form-btn-wrapper {
+  position: relative;
+  padding-left: 5px;
+  margin-left: 20px;
+}
+
+.NavBar_container .NavBar_search-form .NavBar_search-form-btn {
+  position: relative;
+  background-color: var(--main-color);
+  color: rgb(0, 0, 0);
+  padding-right: 20px;
+}
+
+.filter_icon {
+  color: black;
+  position: absolute;
+  size: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1px;
+}
+
+.NavBar_container ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.NavBar_container li {
+  height: 50px;
+}
+
+.NavBar_container a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: var(--main-color);
+}
+
+.NavBar_container .NavBar_site-profile {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  margin-left: auto; /*  find a way to replace this  or fix it */
+}
