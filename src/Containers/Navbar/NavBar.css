@@ -2,14 +2,15 @@
   display: flex;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.59) 0%,
-    rgba(0, 0, 0, 0.399) 35%,
-    rgba(0, 0, 0, 0) 100% 
+    rgba(0, 0, 0, 0.807) 5%,
+    rgba(0, 0, 0, 0.559) 40%,
+    rgba(0, 0, 0, 0.032) 100% 
     
   );
   position: relative;
   overflow: hidden;
   z-index: 1;
+  height: 70px; /* not ready fix this  */
   
 
 }

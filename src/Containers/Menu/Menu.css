@@ -1,23 +1,51 @@
 .Menu_Container {
-/*   position: absolute;
- */  color: var(--main-color);
-
+  /*   position: absolute;
+ */
+  color: var(--main-color);
 }
 
 .HeroImg {
-    background-image: url(/src/assets/hero-bg.jpg) ;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0 ;
-    left: 0 ; 
-    height: 100vh;
-    z-index: -1 ;
-    width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -1;
+  width: 100%;
 }
 
-
 .HeroImg_container-info {
-    margin-top: 100px;
-    max-width: 600px; 
+  color: var(--main-color);
+  background-size: cover;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.97) 82%,
+    rgba(0, 0, 0, 0.952) 50%,
+    rgba(18, 18, 18, 0.011) 100%
+  );
+  position: relative;
+  height: calc(100vh - 100px); 
+  width: 100%;
+  padding-left: 20px;
+  top: 0;
+  bottom: 0; /* Position from the bottom */
+  transform: translateY(40%); /* Adjust the percentage as needed */
+}
+
+.HeroImg_container-info_btn {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  background-color: var(--main-color);
+
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px 10px 0 20px;
+  
+
+}
+
+.addList {
+  color: var(--main-color);
+  background-color: rgb(65, 65, 65);
 }

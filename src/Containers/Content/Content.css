@@ -1,0 +1,20 @@
+.movie-explore-section {
+  color: var(--main-color);
+  position: absolute;
+}
+
+.Latest_movies {
+  display: grid;
+  grid-template-columns: 80% 1fr; /* 80% for Latest, 1fr for Trending_updated */
+}
+.Latest {
+    padding: 20px; /* Optional: Add padding as needed */
+    display: flex;
+  }
+
+
+
+
+  .Trending_updated {
+    padding: 20px; /* Optional: Add padding as needed */
+  }  
