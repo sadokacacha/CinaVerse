@@ -17,14 +17,17 @@ function Menu() {
         <div> icon + rating +  tefach </div>
         <p>discriptions : Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, commodi? </p>
         <div className="HeroImg_container-btn">
-          <button className="HeroImg_container-info_btn">
+
+          <button className="HeroImg_container-info_btn watchNow">
             {" "}
-            Watch Now <UilPlay size={12} />{" "}
+            Watch Now <UilPlay size={12}  />{" "}
           </button>
+          
           <button className="HeroImg_container-info_btn addList">
             {" "}
             Add To List <UilHeart size={12} />{" "}
           </button>
+
         </div>
       </div>
     </>

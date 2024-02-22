@@ -1,19 +1,21 @@
-import React from 'react'
-
+import React from "react";
+import "./Movies.css";
 function Movies() {
   return (
-    <div>
-       <div className="Recommended">
-            <p> movies / tv show   </p>
-            <div> 
-<img src="movie.png" alt="movie 1 " />
-<p>movie disxription</p>
-<p> rating </p>
+    <>
+      <div className="Recommended_section">
+        {/* <img src="movie.png" alt="movie name  " /> */}
+        <div className="background_color-test">
+          {" "}
+          <button></button> {/* background */}
+        </div>
 
-            </div>
-          </div>
-    </div>
-  )
+        <p> movie name</p>
+        <p>date / duration </p>
+        <p>movie type </p>
+      </div>
+    </>
+  );
 }
 
-export default Movies
+export default Movies;
