@@ -35,6 +35,16 @@ function Content() {
             <div className="latest-movies-container">
               <Movies />
               <Movies />
+              <Movies />
+              <Movies />
+              <Movies />
+              <Movies />
+              <Movies />
+              <Movies />
+
+
+
+
             </div>
           </div>
         </div>

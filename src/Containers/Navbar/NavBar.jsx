@@ -33,25 +33,23 @@ function NavBar() {
       </div>
       <div className="NavBar_input-Warpper">
         <form className="NavBar_search-form" action="/search">
+
+          <button className="NavBar_search-form-btn">
+            Filter
+            <UilFilter className="icons filter_icon" size={20} />
+          </button>
+
           <input
             className="NavBar_search-form-search"
             type="text"
             placeholder="Search..."
           />
 
-          <UilSearch className="icons search_icon" />
-          <div className="NavBar_search-form-btn-wrapper">
-            <input
-              className="NavBar_search-form-btn"
-              type="submit"
-              value="Filter"
-            />
-          </div>
-          <UilFilter className="icons filter_icon" size={20} />
+          <UilSearch className="search_icon" />
         </form>
       </div>
       <div className="NavBar_site-profile">
-        <UilUser className="icons profile_icon" />
+        <UilUser className=" profile_icon" />
       </div>
     </div>
   );

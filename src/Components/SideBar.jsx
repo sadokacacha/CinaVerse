@@ -5,13 +5,16 @@ function SideBar() {
     <>
       <div className="Trending_section">
         {/* <img src="movie.png" alt="movie name  " /> */}
-        <div className="background_color-test2">
-          {" "}
-          <button></button> {/* background */}
+
+        <div className="Movie_info">
+          <span className="type">type</span>
+
+          <span className="movie_title"> name</span>
+
+          <span className="movie_date"> rating - 2024 - 120min </span>
         </div>
-<p>movie / movie type</p>
-        <p> movie name</p> 
-        <p> rating / date / duration </p>
+
+        <div className="background_color-test2"> {/* background */}</div>
       </div>
       <hr />
     </>

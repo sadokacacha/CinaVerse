@@ -1,9 +1,24 @@
 .Trending_section {
   padding: 0 10px 0 10px;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
 }
 
 .background_color-test2 {
-  background-color: aqua;
+  background-color: rgb(71, 71, 71);
   width: 60px;
   height: 70px;
+  margin: 5px;
+}
+
+.Movie_info {
+  flex-grow: 1;
+}
+
+.Trending_section span {
+  font-size: 14px;
+}
+
+hr {
+  border-color: rgb(71, 71, 71);
 }
