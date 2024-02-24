@@ -36,7 +36,7 @@ function NavBar() {
 
           <button className="NavBar_search-form-btn">
             Filter
-            <UilFilter className="icons filter_icon" size={20} />
+            <UilFilter className="filter_icon" size={13} />
           </button>
 
           <input

@@ -32,10 +32,17 @@
   transform: translateY(40%); /* Adjust the percentage as needed */
 }
 
+.HeroImg_container-discriptions {
+  color : var(--Text-color) ;
+  width: 700px;
+  height: auto;
+}
+
+
 .HeroImg_container-info_btn {
   color: rgb(0, 0, 0);
   font-weight: bold;
-  background-color: var(--main-color);
+  background-color: var(--second-color);
 
   border: none;
   border-radius: 10px;
@@ -44,12 +51,14 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .watchNow:hover {
-  background-color: #9aeffc;
+  background-color: var(--main-color);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-  transition: box-shadow 0.3s ease-out;
+  transition: background-color 0.5s ease-out, box-shadow 0.5s ease-out;
+
 }
 
 .HeroImg_container-info_btn.addList {

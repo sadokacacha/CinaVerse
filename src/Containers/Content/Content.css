@@ -8,6 +8,19 @@
   grid-template-columns: 80% 1fr; /* 80% for Latest, 1fr for Trending_updated */
 }
 
+
+.content-container h1 {
+    padding-left: 15px;
+
+}
+
+.content-container_type{
+
+  color: var(--third-color);
+  padding-left: 20px;
+}
+
+
 .recommended-movies-container {
   display: flex;
   flex-wrap: wrap;

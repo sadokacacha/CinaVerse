@@ -1,17 +1,18 @@
-import "./App.css";
-import Content from "./Containers/Content/Content";
-import NavBar from "./Containers/Navbar/NavBar";
-import Menu from "./Containers/menu/Menu";
+import './App.css';
+import NavBar from './Containers/Navbar/NavBar';
+import Menu from './Containers/menu/Menu';
+import Content from './Containers/Content/Content';
 
 function App() {
   return (
-    <div>
-      <NavBar />
+    <>
+      <div>
+        <NavBar />
+        <Menu />
+        <Content />
 
-      <Menu />
-
-      <Content />
-  </div>
+      </div>
+    </>
   );
 }
 

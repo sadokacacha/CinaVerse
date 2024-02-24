@@ -1,0 +1,45 @@
+.Trending_section {
+  padding: 7px 10px 7px 10px;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+}
+
+.Trending_section:hover {
+  background-color: rgba(71, 71, 71, 0.474);
+}
+.Trending_section:hover + hr {
+  border-color: var(--highlight-color);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  transition: box-shadow 0.3s ease-out;
+}
+
+hr {
+  border-color: var(--Text-color);
+}
+
+.background_color-test2 {
+  background-color: rgb(71, 71, 71);
+  width: 60px;
+  height: 70px;
+  margin: 5px;
+}
+
+.SideBar_Movie_info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: var(--Text-color);
+}
+
+.Trending_section {
+  font-size: 14px;
+}
+
+.SideBar_Movie_info .SideBar_type {
+  color: var(--second-color);
+}
+
+.SideBar_Movie_info .SideBar_movie_title {
+  font-size: 20px;
+  font-weight: bold;
+}

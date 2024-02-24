@@ -1,0 +1,9 @@
+ 1) fix the Color pallet 
+ 2) add and fix the footer 
+ 3) either do the nav btn 
+ 4) make the site responsive 
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 5) AFTER the responsive !!!! add the api 
+
+
+

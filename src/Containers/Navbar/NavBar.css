@@ -31,8 +31,20 @@
   transform: translateX(100px);
   border: 1px solid var(--main-color);
   border-radius: 10px;
-  padding: 3px;
+  padding: 4px;
 }
+
+.NavBar_input-Warpper:hover {
+  border: 1px solid var(--third-color);
+  transition: border 0.3s ease-out;
+}
+.NavBar_input-Warpper:hover .search_icon {
+    color: var(--highlight-color);
+      transition: color 0.3s ease-out;
+
+}
+
+
 
 .NavBar_search-form {
   display: flex;
@@ -43,15 +55,20 @@
 
 .NavBar_search-form-btn {
   position: relative;
-  background-color: var(--main-color);
+  background-color: var(--second-color);
   color: rgb(0, 0, 0);
-  padding: 3px;
+  padding: 5px 3px 5px 3px;
   border: transparent;
   border-radius: 5px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
   display: flex;
   align-items: center;
+  cursor: pointer;
+}
+.NavBar_search-form-btn:hover {
+  background-color: var(--main-color);
+  transition: background-color 0.3s ease-out;
 }
 
 .filter_icon {
@@ -60,12 +77,10 @@
 }
 
 .NavBar_search-form-search {
-  
   background-color: transparent;
-  color: var(--main-color);
+  color: var(--highlight-color);
   border: transparent;
   padding-left: 5px;
- 
 }
 
 .NavBar_search-form-search:active {
@@ -76,12 +91,13 @@
 }
 
 .search_icon {
-  color: var(--main-color);
+  color: var(--second-color);
   position: relative;
   top: 50%;
   right: 5px;
   pointer-events: none;
   margin-left: 6px;
+  cursor: pointer;
 }
 
 .NavBar_container ul {
@@ -102,9 +118,11 @@
   display: flex;
   align-items: center;
   color: var(--main-color);
+  cursor: pointer;
 }
+
 .NavBar_container a:hover {
-  color: white;
+  color: var(--highlight-color);
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
@@ -113,5 +131,5 @@
   align-items: center;
   padding-right: 20px;
   transform: translateX(110px); /* Adjust the percentage as needed */
-  color: var(--main-color);
+  color: var(--highlight-color);
 }
