@@ -32,6 +32,7 @@
   border: 1px solid var(--main-color);
   border-radius: 10px;
   padding: 4px;
+  cursor: pointer;
 }
 
 .NavBar_input-Warpper:hover {
@@ -39,12 +40,9 @@
   transition: border 0.3s ease-out;
 }
 .NavBar_input-Warpper:hover .search_icon {
-    color: var(--highlight-color);
-      transition: color 0.3s ease-out;
-
+  color: var(--highlight-color);
+  transition: color 0.3s ease-out;
 }
-
-
 
 .NavBar_search-form {
   display: flex;
@@ -66,13 +64,15 @@
   align-items: center;
   cursor: pointer;
 }
+
+
 .NavBar_search-form-btn:hover {
   background-color: var(--main-color);
   transition: background-color 0.3s ease-out;
 }
 
 .filter_icon {
-  margin-left: 5px; /* Adjust the margin as needed */
+  margin-left: 5px; 
   color: black;
 }
 
@@ -81,6 +81,7 @@
   color: var(--highlight-color);
   border: transparent;
   padding-left: 5px;
+  cursor: pointer;
 }
 
 .NavBar_search-form-search:active {
@@ -95,10 +96,18 @@
   position: relative;
   top: 50%;
   right: 5px;
-  pointer-events: none;
   margin-left: 6px;
   cursor: pointer;
 }
+
+.toggleClassCheck{
+
+  color: black;
+  background-color: black;
+    margin-left: 50px;
+
+}
+
 
 .NavBar_container ul {
   list-style: none;
@@ -123,13 +132,23 @@
 
 .NavBar_container a:hover {
   color: var(--highlight-color);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
 
 .NavBar_site-profile {
   display: flex;
   align-items: center;
-  padding-right: 20px;
   transform: translateX(110px); /* Adjust the percentage as needed */
   color: var(--highlight-color);
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background-color: var(--second-color);
+  padding: 5px;
+}
+
+.NavBar_site-profile:hover {
+  color: var(--second-color);
+  background-color: var(--highlight-color);
+  transition: background-color color 0.3s ease-out;
 }

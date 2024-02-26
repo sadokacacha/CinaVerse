@@ -1,16 +1,12 @@
-import React from 'react';
-import './Content.css';
-import Movies from '../../Components/Movies/Movies';
-import SideBar from '../../Components/SideBar/SideBar';
-import Footer from '../Footer/Footer';
-
-function Content() {
+import React from 'react'
+import './Filter.css'
+import Movies from '../Movies/Movies';
+import SideBar from '../SideBar/SideBar';
+function Filter() {
   return (
     <div className="movie-explore-section">
       <div>
-        <p className="movie-explore-section_discription">
-          If you enjoy the website, please consider sharing it
-        </p>
+    
       </div>
 
       <div className="content-container">
@@ -31,6 +27,7 @@ function Content() {
             <Movies />
             <Movies />
             <Movies />
+            <Movies/>
           </div>
 
           <div>
@@ -88,6 +85,7 @@ function Content() {
               <SideBar />
               <SideBar />
               <SideBar />
+              <SideBar/>
             </div>
           </div>
           <div>
@@ -107,4 +105,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default Filter

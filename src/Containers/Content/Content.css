@@ -3,6 +3,12 @@
   position: absolute;
 }
 
+.movie-explore-section_discription {
+  color: var(--Text-color);
+  padding: 0 0 20px 20px;
+}
+
+
 .content-container {
   display: grid;
   grid-template-columns: 80% 1fr; /* 80% for Latest, 1fr for Trending_updated */

@@ -1,6 +1,19 @@
- 1) fix the Color pallet 
- 2) add and fix the footer 
- 3) either do the nav btn 
+ 1) fix the Color pallet  / done / 
+
+ 2) add and fix the footer  / almost /
+
+ 3)  do the nav btn   !Fuck this ill do it later! 
+
+
+3.1) apparently i should learn react router now .... fuck my life
+
+
+
+
+
+
+
+
  4) make the site responsive 
  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  5) AFTER the responsive !!!! add the api 

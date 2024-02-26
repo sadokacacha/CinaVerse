@@ -24,12 +24,12 @@
     rgba(18, 18, 18, 0.011) 100%
   );
   position: relative;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 90px);
   width: 100%;
   padding-left: 20px;
   top: 0;
-  bottom: 0; /* Position from the bottom */
-  transform: translateY(40%); /* Adjust the percentage as needed */
+  bottom: 0; 
+  transform: translateY(45%); /* Adjust the percentage as needed */
 }
 
 .HeroImg_container-discriptions {
