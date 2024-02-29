@@ -1,0 +1,17 @@
+.ErrorHandler{
+    color: var(--highlight-color );
+}
+
+.Errorpage_btn{
+    position: relative;
+    background-color: var(--second-color);
+    color: rgb(0, 0, 0);
+    padding: 5px 3px 5px 3px;
+    border: transparent;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}

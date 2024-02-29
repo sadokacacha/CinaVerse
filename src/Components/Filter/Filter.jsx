@@ -1,12 +1,14 @@
-import React from 'react'
-import './Filter.css'
-import Movies from '../Movies/Movies';
-import SideBar from '../SideBar/SideBar';
+import React from "react";
+import "./Filter.css";
+import Movies from "../Movies/Movies";
+import SideBar from "../SideBar/SideBar";
+import SecondNav from "../../Containers/SecondNav/SecondNav";
 function Filter() {
   return (
     <div className="movie-explore-section">
-      <div>
-    
+      <div className="Second_NavBar">
+
+      <SecondNav />
       </div>
 
       <div className="content-container">
@@ -27,7 +29,7 @@ function Filter() {
             <Movies />
             <Movies />
             <Movies />
-            <Movies/>
+            <Movies />
           </div>
 
           <div>
@@ -85,7 +87,7 @@ function Filter() {
               <SideBar />
               <SideBar />
               <SideBar />
-              <SideBar/>
+              <SideBar />
             </div>
           </div>
           <div>
@@ -100,9 +102,8 @@ function Filter() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
 
-export default Filter
+export default Filter;

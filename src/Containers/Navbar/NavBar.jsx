@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import "./NavBar.css";
+
 import Mainlogo from "/src/assets/Mainlogo2.png";
 import { UilSearch, UilFilter, UilUser } from "@iconscout/react-unicons";
+import { Outlet, Link } from "react-router-dom";
+
 function NavBar() {
   const [btnClicked, setBtnClicked] = useState(false);
 
   const HandleClick = () => {
     setBtnClicked((btnClicked) => !btnClicked);
   };
-  let toggleClassCheck = btnClicked
-    ? ' active'
-    : null;  
-    /* idk this is weird fix this later cuz me lazy  */
+  let toggleClassCheck = btnClicked ? " active" : null;
+
+  /* idk this is weird fix this later cuz me lazy  */
 
   return (
     <div className="NavBar_container">
@@ -22,22 +24,22 @@ function NavBar() {
       <div className="NavBar_genre-list">
         <ul>
           <li>
-            <a href= '#' >GENRE</a>
+            <Link to={`/Filter`}>GENERE</Link>
           </li>
           <li>
-            <a href="#">COUNTRY</a>
+            <Link to={`/Filter`}>COUNTRY</Link>
           </li>
           <li>
-            <a href="#">MOVIES</a>
+            <Link to={`/Filter`}>MOVIES</Link>
           </li>
           <li>
-            <a href="#">TV SHOWS</a>
+            <Link to={`/Filter`}>TV SHOWS</Link>
           </li>
           <li>
-            <a href="#">TRENDING</a>
+            <Link to={`/Filter`}>TRENDING</Link>
           </li>
           <li>
-            <a href="#">TOP IMDB</a>
+            <Link to={`/Filter`}>TOP IMDB</Link>
           </li>
         </ul>
       </div>
