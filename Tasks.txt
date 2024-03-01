@@ -5,7 +5,7 @@
  3)  do the nav btn   !Fuck this ill do it later! 
 
 
-3.1) apparently i should learn react router now .... fuck my life
+3.1) apparently i should learn react router now .... fuck my life  / Done did what need to be done  / 
 
 
 
@@ -14,9 +14,11 @@
 
 
 
- 4) make the site responsive 
- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- 5) AFTER the responsive !!!! add the api 
+ 4) make the site responsive  / nahhh / 
+
+
+
+ 5) AFTER the responsive !!!! add the api  / ill do this now / 
 
 
 

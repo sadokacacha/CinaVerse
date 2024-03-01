@@ -18,7 +18,10 @@ function NavBar() {
   return (
     <div className="NavBar_container">
       <div className="NavBar_site-logo">
+        <Link to={`/`}>
+        
         <img className="website-icon" src={Mainlogo} alt="Website Icon" />
+        </Link>
       </div>
 
       <div className="NavBar_genre-list">

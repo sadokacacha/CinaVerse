@@ -1,20 +1,15 @@
-.NavBar_container {
-  display: flex;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.922) 2%,
-    rgba(0, 0, 0, 0.597) 70%,
-    rgba(0, 0, 0, 0.152) 100%
-  );
+.Second_NavBar_container {
+  background-color: black;
   position: relative;
   overflow: hidden;
   z-index: 1;
-  height: 70px; /* not ready fix this  */
   display: flex;
+  justify-content: center;
   align-items: center;
+  padding: 10px 0 10px 0;
 }
 
-.NavBar_site-logo {
+.Second_NavBar_site-logo {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -22,7 +17,7 @@
   padding-left: 10px;
 }
 
-.NavBar_input-Warpper {
+.Second_NavBar_input-Warpper {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -34,23 +29,23 @@
   cursor: pointer;
 }
 
-.NavBar_input-Warpper:hover {
+.Second_NavBar_input-Warpper:hover {
   border: 1px solid var(--third-color);
   transition: border 0.3s ease-out;
 }
-.NavBar_input-Warpper:hover .search_icon {
+.Second_NavBar_input-Warpper:hover .search_icon {
   color: var(--highlight-color);
   transition: color 0.3s ease-out;
 }
 
-.NavBar_search-form {
+.Second_NavBar_search-form {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-.NavBar_search-form-btn {
+.Second_NavBar_search-form-btn {
   position: relative;
   background-color: var(--second-color);
   color: rgb(0, 0, 0);
@@ -64,18 +59,17 @@
   cursor: pointer;
 }
 
-
-.NavBar_search-form-btn:hover {
+.Second_NavBar_search-form-btn:hover {
   background-color: var(--main-color);
   transition: background-color 0.3s ease-out;
 }
 
-.filter_icon {
-  margin-left: 5px; 
+.Second_filter_icon {
+  margin-left: 5px;
   color: black;
 }
 
-.NavBar_search-form-search {
+.Second_NavBar_search-form-search {
   background-color: transparent;
   color: var(--highlight-color);
   border: transparent;
@@ -83,14 +77,14 @@
   cursor: pointer;
 }
 
-.NavBar_search-form-search:active {
+.Second_NavBar_search-form-search:active {
   outline: none;
 }
-.NavBar_search-form-search:focus {
+.Second_NavBar_search-form-search:focus {
   outline: none;
 }
 
-.search_icon {
+.Second_search_icon {
   color: var(--second-color);
   position: relative;
   top: 50%;
@@ -99,21 +93,24 @@
   cursor: pointer;
 }
 
+.Second_toggleClassCheck {
+  color: black;
+  background-color: black;
+  margin-left: 50px;
+}
 
-
-
-.NavBar_container ul {
+.Second_NavBar_container ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.NavBar_container li {
+.Second_NavBar_container li {
   height: 50px;
 }
 
-.NavBar_container a {
+.Second_NavBar_container a {
   height: 100%;
   padding: 0 30px;
   text-decoration: none;
@@ -123,12 +120,12 @@
   cursor: pointer;
 }
 
-.NavBar_container a:hover {
+.Second_NavBar_container a:hover {
   color: var(--highlight-color);
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
 
-.NavBar_site-profile {
+.Second_NavBar_site-profile {
   display: flex;
   align-items: center;
   transform: translateX(110px); /* Adjust the percentage as needed */
@@ -140,8 +137,20 @@
   padding: 5px;
 }
 
-.NavBar_site-profile:hover {
+.Second_NavBar_site-profile:hover {
   color: var(--second-color);
   background-color: var(--highlight-color);
   transition: background-color color 0.3s ease-out;
+}
+
+.Second_NavBar_line {
+  width: 100%;
+ padding-top: 20px;
+
+}
+
+.Second_NavBar_line hr {
+ border-color: var(--highlight-color);
+
+
 }
