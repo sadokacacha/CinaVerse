@@ -10,7 +10,7 @@ function Menu() {
       <div className="Menu_Container">
         <div className="hero_section">
           <div className="HeroImg_container">
-            <img className="HeroImg" src="/src/assets/menu_assets.jpg" alt="" />
+            <img className="HeroImg" src="/menu_assets.jpg" alt="" />
           </div>
         </div>
       </div>

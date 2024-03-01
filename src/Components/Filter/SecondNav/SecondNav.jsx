@@ -1,6 +1,6 @@
 import React from 'react';
 import './SecondNav.css';
-import Mainlogo from '/src/assets/Mainlogo2.png';
+import Mainlogo from "/MainLogo2.png"
 import { UilSearch, UilFilter, UilUser } from '@iconscout/react-unicons';
 import { Link } from 'react-router-dom';
 function SecondNav() {
