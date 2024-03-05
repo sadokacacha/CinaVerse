@@ -1,27 +1,17 @@
 import React, { useState } from "react";
 import "./NavBar.css";
 
-import Mainlogo from "/MainLogo2.png"
+import Mainlogo from "/MainLogo2.png";
 
 import { UilSearch, UilFilter, UilUser } from "@iconscout/react-unicons";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function NavBar() {
-  const [btnClicked, setBtnClicked] = useState(false);
-
-  const HandleClick = () => {
-    setBtnClicked((btnClicked) => !btnClicked);
-  };
-  let toggleClassCheck = btnClicked ? " active" : null;
-
-  /* idk this is weird fix this later cuz me lazy  */
-
   return (
     <div className="NavBar_container">
       <div className="NavBar_site-logo">
         <Link to={`/`}>
-        
-        <img className="website-icon" src={Mainlogo} alt="Website Icon" />
+          <img className="website-icon" src={Mainlogo} alt="Website Icon" />
         </Link>
       </div>
 
@@ -34,7 +24,7 @@ function NavBar() {
             <Link to={`/Filter`}>COUNTRY</Link>
           </li>
           <li>
-            <Link to={`/Filter`}>MOVIES</Link>
+            <Link to={`/MoviesApi`}>MOVIES</Link>
           </li>
           <li>
             <Link to={`/Filter`}>TV SHOWS</Link>
@@ -50,7 +40,7 @@ function NavBar() {
 
       <div className="NavBar_input-Warpper">
         <form className="NavBar_search-form" action="/search">
-          <button onClick={HandleClick} className="NavBar_search-form-btn">
+          <button className="NavBar_search-form-btn">
             Filter
             <UilFilter className="filter_icon" size={13} />
           </button>

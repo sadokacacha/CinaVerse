@@ -8,6 +8,7 @@ import {
     createBrowserRouter,
     RouterProvider,
   } from "react-router-dom";
+import MoviesApi from './MoviesApi.jsx'
 
 
   const router = createBrowserRouter([
@@ -22,9 +23,14 @@ import {
         element: <Filter/> ,
         errorElement:<ErrorPage/>,
 
-    }
+    }, 
 
+    {
+      path: "/MoviesApi",
+      element: <MoviesApi/> ,
+      errorElement:<ErrorPage/>,
 
+  }, 
     
   ]);
 

@@ -1,8 +1,8 @@
-import React from 'react';
-import './SecondNav.css';
-import Mainlogo from "/MainLogo2.png"
-import { UilSearch, UilFilter, UilUser } from '@iconscout/react-unicons';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "./SecondNav.css";
+import Mainlogo from "/MainLogo2.png";
+import { UilSearch, UilFilter, UilUser } from "@iconscout/react-unicons";
+import { Link } from "react-router-dom";
 function SecondNav() {
   return (
     <>
@@ -10,7 +10,7 @@ function SecondNav() {
         <div className="Second_NavBar_site-logo">
           <Link to={`/`}>
             <img className="website-icon" src={Mainlogo} alt="Website Icon" />
-          </Link>{' '}
+          </Link>{" "}
         </div>
 
         <div className="Second_NavBar_genre-list">
@@ -22,7 +22,7 @@ function SecondNav() {
               <Link to={`/Filter`}>COUNTRY</Link>
             </li>
             <li>
-              <Link to={`/Filter`}>MOVIES</Link>
+              <Link to={`/MoviesApi`}>MOVIES</Link>
             </li>
             <li>
               <Link to={`/Filter`}>TV SHOWS</Link>

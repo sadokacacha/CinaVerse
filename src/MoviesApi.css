@@ -1,0 +1,10 @@
+.ApiTesting{
+    color: var(--highlight-color);
+}
+
+.ApiTesting img {
+
+
+    width: 100px;
+    height: auto;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
-import Mainlogo from "/MainLogo2.png"
-import './Footer.css';
+ import Mainlogo from "/MainLogo2.png"
+ import './Footer.css';
+
 function Footer() {
   return (
     <div>
@@ -12,6 +13,7 @@ function Footer() {
         <div className="footer_genre-list">
           <ul>
             <li>
+              
               <a href="#">GENRE</a>
             </li>
             <li>
