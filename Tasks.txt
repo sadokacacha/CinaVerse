@@ -20,5 +20,10 @@
 
  5) AFTER the responsive !!!! add the api  / ill do this now / 
 
+ api needed   ( poster api , recommanded tv show and movies ,   and latest movies api , latest tv show api  , trending api , updated api  ) 
+ => for the main page 
+
+ 
+
 
 

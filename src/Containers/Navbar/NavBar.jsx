@@ -1,12 +1,24 @@
 import React, { useState } from "react";
+
 import "./NavBar.css";
 
 import Mainlogo from "/MainLogo2.png";
 
 import { UilSearch, UilFilter, UilUser } from "@iconscout/react-unicons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function NavBar() {
+const NavBar = ({ movieQuery, setMovieQuery, fetchData }) => {
+  const navigate = useNavigate();
+
+  /*  const handleInputChange = (e) => {
+    setMovieQuery(e.target.value);
+  }; */
+
+  const handleSearchClick = () => {
+    navigate(`/Autocomplet ${handleSearchClick} `  );
+    fetchData();
+  };
+
   return (
     <div className="NavBar_container">
       <div className="NavBar_site-logo">
@@ -24,10 +36,10 @@ function NavBar() {
             <Link to={`/Filter`}>COUNTRY</Link>
           </li>
           <li>
-            <Link to={`/MoviesApi`}>MOVIES</Link>
+            <Link to={`/PopularMovies`}>MOVIES</Link>
           </li>
           <li>
-            <Link to={`/Filter`}>TV SHOWS</Link>
+            <Link to={`/Autocomplet`}>TV SHOWS</Link>
           </li>
           <li>
             <Link to={`/Filter`}>TRENDING</Link>
@@ -44,14 +56,14 @@ function NavBar() {
             Filter
             <UilFilter className="filter_icon" size={13} />
           </button>
-
           <input
             className="NavBar_search-form-search"
             type="text"
-            placeholder="Search..."
-          />
-
-          <UilSearch className="search_icon " />
+            value={movieQuery}
+            onChange={(e) => setMovieQuery(e.target.value)}
+            placeholder="Search for movies..."
+          />{" "}
+          <UilSearch className="search_icon " onClick={handleSearchClick} />
         </form>
       </div>
 
@@ -60,6 +72,6 @@ function NavBar() {
       </div>
     </div>
   );
-}
+};
 
 export default NavBar;

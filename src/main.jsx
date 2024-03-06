@@ -8,7 +8,8 @@ import {
     createBrowserRouter,
     RouterProvider,
   } from "react-router-dom";
-import MoviesApi from './MoviesApi.jsx'
+import PopularMovies from './API/PopularMovies.jsx'
+import Autocomplet from './API/Autocomplet.jsx'
 
 
   const router = createBrowserRouter([
@@ -26,11 +27,19 @@ import MoviesApi from './MoviesApi.jsx'
     }, 
 
     {
-      path: "/MoviesApi",
-      element: <MoviesApi/> ,
+      path: "/PopularMovies",
+      element: <PopularMovies/> ,
       errorElement:<ErrorPage/>,
 
   }, 
+
+
+  {
+    path: "/Autocomplet",
+    element: <Autocomplet/> ,
+    errorElement:<ErrorPage/>,
+
+}, 
     
   ]);
 

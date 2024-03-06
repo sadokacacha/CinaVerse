@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import "./MoviesApi.css";
-import SecondNav from "./Components/Filter/SecondNav/SecondNav";
-
-function MoviesApi() {
+import React from "react";
+import { useState } from "react";
+import NavBar from "../Containers/Navbar/NavBar";
+import "./APIII.css";
+function Autocomplet() {
+  const [movieSuggestions, setMovieSuggestions] = useState([]);
   const [movieQuery, setMovieQuery] = useState("");
-  const [movieSuggestions, setMovieSuggestions] = useState([]); // Assuming data.d is an array
-
   const fetchData = async () => {
     const url = `https://imdb8.p.rapidapi.com/auto-complete?q=${movieQuery}`;
     const options = {
@@ -35,30 +34,19 @@ function MoviesApi() {
       console.error("Error fetching movie suggestions:", error);
     }
   };
-
+  
   return (
     <div className="ApiTesting">
-      <SecondNav />
-      <div className="movie_search_container">
-        <input
-          type="text"
-          value={movieQuery}
-          onChange={(e) => setMovieQuery(e.target.value)}
-          placeholder="Search for movies..."
-        />
-        <button onClick={fetchData}>Search</button>
-      </div>
+        
+     <NavBar
+        movieQuery={movieQuery}
+        setMovieQuery={setMovieQuery}
+        fetchData={fetchData}
+      />
 
       {movieSuggestions.map((data) => (
         <>
-          {/*      <img className="ApiTesting_movie" src={data.i.imageUrl} alt="" />
-          <p key={data.id}>{data.l}</p>
-          <div className="movie_info">
-            <span> {data.q} </span>
-            <span> {data.y} </span>
-          </div> */}
-
-          <div className="Recommended_section">
+          <div className="Recommended_section " key={data.id} >
             <div className="background_color-test">
               {" "}
               <img src={data.i.imageUrl} alt="" />
@@ -78,4 +66,4 @@ function MoviesApi() {
   );
 }
 
-export default MoviesApi;
+export default Autocomplet;
