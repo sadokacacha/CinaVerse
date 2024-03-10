@@ -1,3 +1,17 @@
 .api_test_color{
     color: blanchedalmond;
 }
+
+
+.Recommended_section{
+    display: flex;
+    width: 300px;
+}
+
+
+
+
+.Recommended_section img {
+    width: 100px;
+    height: auto;
+}

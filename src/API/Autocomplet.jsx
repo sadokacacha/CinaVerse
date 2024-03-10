@@ -1,10 +1,5 @@
-import React from "react";
-import { useState } from "react";
-import NavBar from "../Containers/Navbar/NavBar";
 import "./APIII.css";
-function Autocomplet() {
-  const [movieSuggestions, setMovieSuggestions] = useState([]);
-  const [movieQuery, setMovieQuery] = useState("");
+function Autocomplet({ data }) {
   const fetchData = async () => {
     const url = `https://imdb8.p.rapidapi.com/auto-complete?q=${movieQuery}`;
     const options = {
@@ -34,36 +29,10 @@ function Autocomplet() {
       console.error("Error fetching movie suggestions:", error);
     }
   };
-  
-  return (
-    <div className="ApiTesting">
-        
-     <NavBar
-        movieQuery={movieQuery}
-        setMovieQuery={setMovieQuery}
-        fetchData={fetchData}
-      />
 
-      {movieSuggestions.map((data) => (
-        <>
-          <div className="Recommended_section " key={data.id} >
-            <div className="background_color-test">
-              {" "}
-              <img src={data.i.imageUrl} alt="" />
-            </div>
-
-            <p key={data.id} className="movie_title">
-              {data.l}
-            </p>
-            <div className="Movie_info">
-              <span className="movie_date">{data.y} </span>
-              <span className="type">{data.y} </span>
-            </div>
-          </div>
-        </>
-      ))}
-    </div>
-  );
+  return {
+    fetchData,
+  };
 }
 
 export default Autocomplet;

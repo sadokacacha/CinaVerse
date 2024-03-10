@@ -1,0 +1,79 @@
+.ItemDetail {
+  color: var(--Text-color);
+}
+.itemDetailNavBar {
+  display: flex;
+  background: linear-gradient(
+    180deg,
+    rgb(0, 0, 0) 10%,
+    rgba(0, 0, 0, 0.871) 40%,
+    rgba(0, 0, 0, 0.678) 60%,
+    rgba(0, 0, 0, 0.408) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.HeroImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.ItemContainer_gradient {
+  background: linear-gradient(
+    0deg,
+    rgb(0, 0, 0) 5%,
+    rgba(0, 0, 0, 0.522) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.detailsContainer {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  position: relative;
+}
+
+.ItemIMG {
+  background-color: aliceblue;
+  width: 250px;
+  height: 300px;
+  border-radius: 15px;
+}
+
+.ItemContainer_details {
+  width: 100%;
+  color: var(--Text-color);
+}
+.GenereContainer {
+  color: var(--main-color);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+.GenereContainer li {
+    border: 2px solid var(--highlight-color);
+    padding: 9px;
+    border-radius: 20px;
+}

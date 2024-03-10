@@ -7,20 +7,20 @@ import Mainlogo from "/MainLogo2.png";
 import { UilSearch, UilFilter, UilUser } from "@iconscout/react-unicons";
 import { Link, useNavigate } from "react-router-dom";
 
-const NavBar = ({ movieQuery, setMovieQuery, fetchData }) => {
+const NavBar = ({ movieQuery, setMovieQuery, fetchData , customClassItemDetail }) => {
   const navigate = useNavigate();
 
-  /*  const handleInputChange = (e) => {
+  const handleInputChange = (e) => {
     setMovieQuery(e.target.value);
-  }; */
+  };
 
   const handleSearchClick = () => {
-    navigate(`/Autocomplet ${handleSearchClick} `  );
+    navigate(`/Search`);
     fetchData();
   };
 
   return (
-    <div className="NavBar_container">
+    <div className={`NavBar_container ${customClassItemDetail}`}>
       <div className="NavBar_site-logo">
         <Link to={`/`}>
           <img className="website-icon" src={Mainlogo} alt="Website Icon" />
@@ -60,7 +60,7 @@ const NavBar = ({ movieQuery, setMovieQuery, fetchData }) => {
             className="NavBar_search-form-search"
             type="text"
             value={movieQuery}
-            onChange={(e) => setMovieQuery(e.target.value)}
+            onChange={handleInputChange}
             placeholder="Search for movies..."
           />{" "}
           <UilSearch className="search_icon " onClick={handleSearchClick} />

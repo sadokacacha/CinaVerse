@@ -2,14 +2,17 @@
   display: flex;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.922) 2%,
-    rgba(0, 0, 0, 0.597) 70%,
-    rgba(0, 0, 0, 0.152) 100%
+    rgb(0, 0, 0) 10%,
+    rgba(0, 0, 0, 0.871) 40%,
+    rgba(0, 0, 0, 0.678) 60%,
+    rgba(0, 0, 0, 0.408) 80%,
+    rgba(0, 0, 0, 0) 100%
+
   );
   position: relative;
   overflow: hidden;
   z-index: 1;
-  height: 70px; /* not ready fix this  */
+  height: 90px; /* not ready fix this  */
   display: flex;
   align-items: center;
 }
