@@ -2,28 +2,32 @@
 
  2) add and fix the footer  / almost /
 
- 3)  do the nav btn   !Fuck this ill do it later! 
+ 3)  do the nav btn   !Fuck this ill do it later!    / i think i did it / 
 
 
 3.1) apparently i should learn react router now .... fuck my life  / Done did what need to be done  / 
-
-
-
-
-
-
 
 
  4) make the site responsive  / nahhh / 
 
 
 
+
+
  5) AFTER the responsive !!!! add the api  / ill do this now / 
+
+ changed the movie api from rapid api to the movie db.org thingy 
 
  api needed   ( poster api , recommanded tv show and movies ,   and latest movies api , latest tv show api  , trending api , updated api  ) 
  => for the main page 
 
  
+6) learn the fetch thingy or the react query 
 
+
+
+
+
+=====> the site is almost ready  just need api and the resopnsive 
 
 

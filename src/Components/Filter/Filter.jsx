@@ -1,12 +1,12 @@
 import React from 'react';
 import './Filter.css';
 
-import SecondNav from './SecondNav/SecondNav';
 import Filter_Content from './FilterContent.jsx/Filter_Content';
+import NavBar from '../../Containers/Navbar/NavBar';
 function Filter() {
   return (
     <>
-      <SecondNav />
+      <NavBar/>
 
       <Filter_Content />
     </>

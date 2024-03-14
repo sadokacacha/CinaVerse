@@ -1,5 +1,4 @@
 .NavBar_container {
-  display: flex;
   background: linear-gradient(
     180deg,
     rgb(0, 0, 0) 10%,
@@ -7,33 +6,66 @@
     rgba(0, 0, 0, 0.678) 60%,
     rgba(0, 0, 0, 0.408) 80%,
     rgba(0, 0, 0, 0) 100%
-
   );
   position: relative;
   overflow: hidden;
   z-index: 1;
   height: 90px; /* not ready fix this  */
   display: flex;
+}
+
+.NavBar_left_side {
+  display: flex;
   align-items: center;
+  padding-left: 10px;
+  margin-right: auto;
+  justify-content: center;
 }
 
 .NavBar_site-logo {
   display: flex;
-  justify-content: flex-start;
+}
+
+.NavBar_container ul {
+  list-style: none;
+  display: flex;
   align-items: center;
-  padding-right: 20px;
-  padding-left: 10px;
+}
+
+.NavBar_container li {
+  height: 50px;
+}
+
+.NavBar_genre-list a {
+  height: 100%;
+  padding: 0 25px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: var(--main-color);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.NavBar_container a:hover {
+  color: var(--highlight-color);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.NavBar_content_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .NavBar_input-Warpper {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  position: relative;
-  transform: translateX(100px);
+  margin: 0 20px;
+
   border: 1px solid var(--main-color);
   border-radius: 10px;
-  padding: 4px;
+  padding: 5px;
   cursor: pointer;
 }
 
@@ -57,7 +89,7 @@
   position: relative;
   background-color: var(--second-color);
   color: rgb(0, 0, 0);
-  padding: 5px 3px 5px 3px;
+  padding: 5px;
   border: transparent;
   border-radius: 5px;
   font-size: 12px;
@@ -67,14 +99,13 @@
   cursor: pointer;
 }
 
-
 .NavBar_search-form-btn:hover {
   background-color: var(--main-color);
   transition: background-color 0.3s ease-out;
 }
 
 .filter_icon {
-  margin-left: 5px; 
+  margin-left: 5px;
   color: black;
 }
 
@@ -102,39 +133,10 @@
   cursor: pointer;
 }
 
-
-
-
-.NavBar_container ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.NavBar_container li {
-  height: 50px;
-}
-
-.NavBar_container a {
-  height: 100%;
-  padding: 0 30px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  color: var(--main-color);
-  cursor: pointer;
-}
-
-.NavBar_container a:hover {
-  color: var(--highlight-color);
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-}
-
 .NavBar_site-profile {
   display: flex;
   align-items: center;
-  transform: translateX(110px); /* Adjust the percentage as needed */
+  margin-right: 50px;
   color: var(--highlight-color);
   cursor: pointer;
   border: 1px solid transparent;

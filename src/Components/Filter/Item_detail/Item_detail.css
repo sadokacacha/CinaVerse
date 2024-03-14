@@ -11,9 +11,10 @@
     rgba(0, 0, 0, 0.408) 80%,
     rgba(0, 0, 0, 0) 100%
   );
-  position: relative;
+  position: absolute;
   overflow: hidden;
   z-index: 1;
+  width: 100%;
   height: 90px;
   display: flex;
   align-items: center;
@@ -29,12 +30,11 @@
 }
 
 .ItemContainer_gradient {
-  background: linear-gradient(
-    0deg,
-    rgb(0, 0, 0) 5%,
-    rgba(0, 0, 0, 0.522) 60%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: rgba(149, 148, 148, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.2px);
+  -webkit-backdrop-filter: blur(13.2px);
   position: absolute;
   width: 100%;
   height: 100vh;
@@ -45,7 +45,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 1200px;
   height: 100vh;
+  margin: 0 auto;
 }
 
 .detailsContainer {
@@ -66,14 +68,16 @@
   color: var(--Text-color);
 }
 .GenereContainer {
-  color: var(--main-color);
+  color: var( --highlight-color);
   list-style: none;
   display: flex;
   justify-content: space-between;
   width: 400px;
 }
 .GenereContainer li {
-    border: 2px solid var(--highlight-color);
-    padding: 9px;
-    border-radius: 20px;
+  background-color:  var(--main-color);
+  padding: 9px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
 }
