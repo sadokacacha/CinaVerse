@@ -58,15 +58,22 @@
   align-items: center;
 }
 
-.NavBar_input-Warpper {
+.InputContainer{
   display: flex;
   align-items: center;
   margin: 0 20px;
 
+}
+
+
+
+.NavBar_input-Warpper {
+ 
   border: 1px solid var(--main-color);
   border-radius: 10px;
   padding: 5px;
   cursor: pointer;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .NavBar_input-Warpper:hover {
@@ -77,6 +84,14 @@
   color: var(--highlight-color);
   transition: color 0.3s ease-out;
 }
+
+/*  btn that make the navbar show up  */
+
+.NavBar_input-Warpper_Visible{
+  opacity: 0;
+  visibility: hidden;
+}
+
 
 .NavBar_search-form {
   display: flex;

@@ -1,21 +1,29 @@
-import React, { useState } from 'react';
+import { useState } from "react";
 
-import './NavBar.css';
+import "./NavBar.css";
 
-import Mainlogo from '/MainLogo2.png';
+import Mainlogo from "/MainLogo2.png";
 
-import { UilSearch, UilFilter, UilUser } from '@iconscout/react-unicons';
-import { Link, useNavigate } from 'react-router-dom';
+import { UilSearch, UilFilter, UilUser } from "@iconscout/react-unicons";
+import { Link, useNavigate } from "react-router-dom";
 
 const NavBar = ({ movieQuery, setMovieQuery, SecondNav }) => {
+  const [isNavBarVisible, setIsNavBarVisible] = useState(false);
+  const [NavBarVisibleClass, setNavBarVisibleClass] = useState("");
+
+  const handleSearchClick = () => {
+    setIsNavBarVisible(!isNavBarVisible);
+    setNavBarVisibleClass(
+      isNavBarVisible ? "NavBar_input-Warpper_Visible" : "NavBar_input-Warpper"
+    );
+
+    console.log(isNavBarVisible);
+  };
+
   const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     setMovieQuery(e.target.value);
-  };
-
-  const handleSearchClick = () => {
-    navigate(`/Search`);
   };
 
   return (
@@ -51,22 +59,23 @@ const NavBar = ({ movieQuery, setMovieQuery, SecondNav }) => {
       </div>
 
       <div className="NavBar_content_container">
-        <div className="NavBar_input-Warpper">
-          <form className="NavBar_search-form" action="/search">
-            <button className="NavBar_search-form-btn">
-              Filter
-              <UilFilter className="filter_icon" size={13} />
-            </button>
-
-            <input
-              className="NavBar_search-form-search"
-              type="text"
-              value={movieQuery}
-              onChange={handleInputChange}
-              placeholder="Search for movies..."
-            />{' '}
-          </form>
-            <UilSearch className="search_icon " onClick={handleSearchClick} />
+        <div className="InputContainer">
+          <div className={NavBarVisibleClass}>
+            <form className="NavBar_search-form" action="/search">
+              <button className="NavBar_search-form-btn">
+                Filter
+                <UilFilter className="filter_icon" size={13} />
+              </button>
+              <input
+                className="NavBar_search-form-search"
+                type="text"
+                value={movieQuery}
+                onChange={handleInputChange}
+                placeholder="Search for movies..."
+              />{" "}
+            </form>
+          </div>
+          <UilSearch className={"search_icon"} onClick={handleSearchClick} />
         </div>
 
         <div className="NavBar_site-profile">
