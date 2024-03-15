@@ -1,9 +1,9 @@
-import React from 'react';
-import Movies from '../../Movies/Movies';
-import SideBar from '../../SideBar/SideBar';
-import { UilFilter } from '@iconscout/react-unicons';
+import React from "react";
+import Movies from "../../Movies/Movies";
+import SideBar from "../../SideBar/SideBar";
+import { UilFilter } from "@iconscout/react-unicons";
 
-import './FilterContent.css';
+import "./FilterContent.css";
 export default function Filter_Content() {
   return (
     <div className="Filter_movie-explore-section">
@@ -39,21 +39,12 @@ export default function Filter_Content() {
             <Movies />
             <Movies />
             <Movies />
-          </div>
-        </div>
-
-        <div className="Filter_Side_Content">
-          <div>
-            <h1>Suggestions</h1>
-            <p className="Filter_content-container_type">day / week / month</p>
-            <div className="Filter_Trending-Side_Content-movies">
-              <SideBar />
-              <SideBar />
-              <SideBar />
-              <SideBar />
-              <SideBar />
-              <SideBar />
-            </div>
+            <Movies />
+            <Movies />
+            <Movies />
+            <Movies />
+            <Movies />
+            <Movies />
           </div>
         </div>
       </div>

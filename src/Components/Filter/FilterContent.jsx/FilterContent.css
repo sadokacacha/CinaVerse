@@ -6,8 +6,8 @@
 
 .Filtered_container {
   display: flex;
-  justify-content: space-between;
-  padding: 0 50px 0 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .Filter_movie-explore-section_discription {
@@ -16,13 +16,22 @@
 }
 
 .Filter_content-container {
-  display: grid;
-  grid-template-columns: 80% 1fr; /* 80% for Latest, 1fr for Trending_updated */
+  display: flex;
+  
 }
 
 .Filter_content-container h1 {
   padding-left: 15px;
 }
+
+.Filtered_container input {
+height: 40px;
+margin: 0 10px;
+}
+
+
+
+
 
 .Filter_content-container_type {
   color: var(--third-color);
@@ -33,11 +42,6 @@
   display: flex;
   flex-wrap: wrap;
 }
-.Filter_latest-movies-container {
-  display: flex;
-  flex-wrap: wrap;
-}
 
-.Filter_Trending-Side_Content-movies {
-  padding: 10px 10px 10px 0;
-}
+
+
