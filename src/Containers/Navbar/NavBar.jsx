@@ -9,7 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const NavBar = ({ movieQuery, setMovieQuery, SecondNav }) => {
   const [isNavBarVisible, setIsNavBarVisible] = useState(false);
-  const [NavBarVisibleClass, setNavBarVisibleClass] = useState("");
+  const [NavBarVisibleClass, setNavBarVisibleClass] = useState("NavBar_input-Warpper_Visible");
 
   const handleSearchClick = () => {
     setIsNavBarVisible(!isNavBarVisible);
@@ -74,6 +74,7 @@ const NavBar = ({ movieQuery, setMovieQuery, SecondNav }) => {
                 placeholder="Search for movies..."
               />{" "}
             </form>
+            
           </div>
           <UilSearch className={"search_icon"} onClick={handleSearchClick} />
         </div>

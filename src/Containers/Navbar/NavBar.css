@@ -10,7 +10,7 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
-  height: 90px; /* not ready fix this  */
+  height: 90px; /* not ready fix this  */ /* maybe ready  */
   display: flex;
 }
 
@@ -58,21 +58,19 @@
   align-items: center;
 }
 
-.InputContainer{
+.InputContainer {
   display: flex;
   align-items: center;
   margin: 0 20px;
-
+  position: relative;
 }
 
-
-
 .NavBar_input-Warpper {
- 
   border: 1px solid var(--main-color);
   border-radius: 10px;
   padding: 5px;
   cursor: pointer;
+  overflow: visible;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
@@ -87,11 +85,12 @@
 
 /*  btn that make the navbar show up  */
 
-.NavBar_input-Warpper_Visible{
+.NavBar_input-Warpper_Visible {
+  overflow: hidden;
   opacity: 0;
-  visibility: hidden;
+  width: 0;
+  transition: width 0.2s, opacity 0.4s;
 }
-
 
 .NavBar_search-form {
   display: flex;
@@ -141,12 +140,17 @@
 
 .search_icon {
   color: var(--second-color);
-  position: relative;
-  top: 50%;
+  position: absolute;
   right: 5px;
-  margin-left: 6px;
   cursor: pointer;
 }
+.search_icon:hover {
+  color: var( --Text-color);
+  
+}
+
+
+
 
 .NavBar_site-profile {
   display: flex;
