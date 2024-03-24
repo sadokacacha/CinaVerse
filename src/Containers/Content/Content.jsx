@@ -1,10 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Content.css';
 import Movies from '../../Components/Movies/Movies';
 import SideBar from '../../Components/SideBar/SideBar';
 import Footer from '../Footer/Footer';
 
 function Content() {
+
+  const [trendingMovies, setTrendingMovies] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const url =
+        'https://api.themoviedb.org/3/trending/movie/day?language=en-US';
+      const options = {
+        method: 'GET',
+        headers: {
+          accept: 'application/json',
+          Authorization:
+            'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMDU2ODE0OTNmZTc0MDc5MGY5NjE5YzE4MDUzMWNmMCIsInN1YiI6IjY1ZWEzMGFkNmJlYWVhMDE2Mzc5ODgwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ttUFm77rQ8NzUlRoTSe9q_3rbJTxPttlk7GaT8H9YiE',
+        },
+      };
+
+      try {
+        const response = await fetch(url, options);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const jsonData = await response.json();
+        setTrendingMovies(jsonData.results);
+        setLoading(false);
+        console.log(jsonData);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
+
   return (
     <div className="movie-explore-section">
       <div>

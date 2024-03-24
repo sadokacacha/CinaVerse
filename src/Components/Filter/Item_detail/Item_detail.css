@@ -57,11 +57,15 @@
 }
 
 .ItemIMG {
-  background-color: aliceblue;
   width: 250px;
   height: 300px;
   border-radius: 15px;
 }
+
+
+
+
+
 
 .ItemContainer_details {
   width: 100%;

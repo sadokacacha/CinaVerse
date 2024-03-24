@@ -7,6 +7,9 @@ import Mainlogo from "/MainLogo2.png";
 import { UilSearch, UilFilter, UilUser } from "@iconscout/react-unicons";
 import { Link, useNavigate } from "react-router-dom";
 
+
+
+
 const NavBar = ({ movieQuery, setMovieQuery, SecondNav }) => {
   const [isNavBarVisible, setIsNavBarVisible] = useState(false);
   const [NavBarVisibleClass, setNavBarVisibleClass] = useState("NavBar_input-Warpper_Visible");
@@ -20,11 +23,12 @@ const NavBar = ({ movieQuery, setMovieQuery, SecondNav }) => {
     console.log(isNavBarVisible);
   };
 
-  const navigate = useNavigate();
 
-  const handleInputChange = (e) => {
-    setMovieQuery(e.target.value);
-  };
+
+
+
+
+
 
   return (
     <div className={`NavBar_container ${SecondNav}`}>
@@ -70,7 +74,6 @@ const NavBar = ({ movieQuery, setMovieQuery, SecondNav }) => {
                 className="NavBar_search-form-search"
                 type="text"
                 value={movieQuery}
-                onChange={handleInputChange}
                 placeholder="Search for movies..."
               />{" "}
             </form>
