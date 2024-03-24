@@ -5,8 +5,10 @@ import SideBar from '../../Components/SideBar/SideBar';
 import Footer from '../Footer/Footer';
 
 function Content() {
-
   const [trendingMovies, setTrendingMovies] = useState([]);
+
+  const [loading, setLoading] =
+    useState(true); /*  so it loads before the page render  importants    */
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,8 +40,6 @@ function Content() {
     fetchData();
   }, []);
 
-
-
   return (
     <div className="movie-explore-section">
       <div>
@@ -48,24 +48,20 @@ function Content() {
         </p>
       </div>
 
-      <div className="content-container">
+{loading ? (
+        <div>Loading...</div>
+      ) : (
+         <div className="content-container">
         <div className="Latest">
           <h1>Recommended</h1>
           <p className="content-container_type"> movies / tv show </p>
+
+
+          
           <div className="recommended-movies-container">
-            <Movies />
-            <Movies />
-            <Movies />
-            <Movies />
-            <Movies />
-            <Movies />
-            <Movies />
-            <Movies />
-            <Movies />
-            <Movies />
-            <Movies />
-            <Movies />
-            <Movies />
+            {trendingMovies.map((movie) => (
+              <Movies key={movie.id} movie={movie} />
+            ))}
           </div>
 
           <div>
@@ -137,6 +133,9 @@ function Content() {
           </div>
         </div>
       </div>
+      )
+
+            }
       <Footer />
     </div>
   );

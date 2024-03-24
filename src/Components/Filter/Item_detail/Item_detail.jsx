@@ -48,9 +48,7 @@ function Item_detail() {
         <>
           <img
             className="HeroImg"
-            src={`https://image.tmdb.org/t/p/w500${
-              trendingMovies[ itemId ].backdrop_path
-            }`}
+            src={`https://image.tmdb.org/t/p/w500${trendingMovies[itemId].backdrop_path}`}
             alt=""
           />
 
@@ -62,9 +60,7 @@ function Item_detail() {
               <div className="detailsContainer_IMG">
                 <img
                   className="ItemIMG"
-                  src={`https://image.tmdb.org/t/p/w500${
-                    trendingMovies[ itemId ].poster_path
-                  }`}
+                  src={`https://image.tmdb.org/t/p/w500${trendingMovies[itemId].poster_path}`}
                   alt=""
                 />
               </div>
@@ -73,7 +69,7 @@ function Item_detail() {
                 <h1>
                   {' '}
                   {trendingMovies.length > 0
-                    ? trendingMovies[ itemId ].title
+                    ? trendingMovies[itemId].title
                     : ''}{' '}
                 </h1>
                 <ul className="GenereContainer">
@@ -83,7 +79,9 @@ function Item_detail() {
                   <li> genere4 </li>
                 </ul>
                 <p>
-                  {trendingMovies.length > 0 ? trendingMovies[8].overview : ''}{' '}
+                  {trendingMovies.length > 0
+                    ? trendingMovies[itemId].overview
+                    : ''}{' '}
                 </p>
 
                 <div className="castIMG">

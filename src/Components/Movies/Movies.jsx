@@ -1,27 +1,25 @@
-import "./Movies.css";
+import './Movies.css';
 import React from 'react';
-function Movies() {
 
-
-
-  
-
-
-
-
+function Movies({ movie }) {
+  if (!movie) {
+    return null; 
+  }
 
   return (
-
     <div className="Recommended_section">
-      {/* <img src="movie.png" alt="movie name  " /> */}
-      <div className="background_color-test">
-        {' '}
-        {/* background */} {/* this will change into a picture  */}
+      <div className="Recommended_section_content">
+        {movie.poster_path && (
+          <img
+            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            alt={movie.title}
+          />
+        )}
       </div>
 
-      <p className="movie_title"> title  </p>
+      <p className="movie_title"> {movie.title} </p>
       <div className="Movie_info">
-        <span className="movie_date">2024 - 100min</span>
+        <span className="movie_date"> </span>
         <span className="type">type </span>
       </div>
     </div>

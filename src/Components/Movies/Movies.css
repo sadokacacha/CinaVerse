@@ -6,6 +6,8 @@
   transition: border 0.4s;
   position: relative;
   cursor: pointer;
+  width: 200px;
+  height: auto;
 }
 
 .Recommended_section:hover {
@@ -14,18 +16,22 @@
   transition: border 0.5s ease-out;
 }
 
-.background_color-test {
-  background-color: rgb(71, 71, 71);
-  width: 150px;
-  height: 160px;
+.Recommended_section_content {
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
+.Recommended_section_content img{
+ width: 250px;
+  height: 240px;
+}
 
 .movie_title {
   display: flex;
-  justify-content: flex-start;
-  padding: 10px 0 10px 0;
   justify-content: center;
+  padding: 10px 0 10px 0;
+  align-items: center;
 
 }
 
