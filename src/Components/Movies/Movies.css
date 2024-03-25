@@ -17,31 +17,34 @@
 }
 
 .Recommended_section_content {
- display: flex;
- justify-content: center;
- align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.Recommended_section_content img{
- width: 250px;
+.Recommended_section_content img {
+  width: 250px;
   height: 240px;
+  padding-bottom: 20px;
 }
 
 .movie_title {
   display: flex;
-  justify-content: center;
-  padding: 10px 0 10px 0;
   align-items: center;
-
+  justify-content: center;
+  padding: 10px 0;
+  height: 40px;
 }
 
 .Movie_info {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .Movie_info span {
+  
   font-size: 10px;
-  color: var(--Text-color);
-  padding: 5px;
+  color: var(--highlight-color);
+  padding: 0 20px;
 }

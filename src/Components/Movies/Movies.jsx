@@ -3,7 +3,7 @@ import React from 'react';
 
 function Movies({ movie }) {
   if (!movie) {
-    return null; 
+    return null;
   }
 
   return (
@@ -17,10 +17,16 @@ function Movies({ movie }) {
         )}
       </div>
 
-      <p className="movie_title"> {movie.title} </p>
+      <p className="movie_title">
+        {' '}
+        {movie.title} {movie.name}{' '}
+      </p>
       <div className="Movie_info">
-        <span className="movie_date"> </span>
-        <span className="type">type </span>
+        <span className="movie_date">
+          {' '}
+          {movie.release_date} {movie.first_air_date}{' '}
+        </span>
+        <span className="type">{movie.media_type} </span>
       </div>
     </div>
   );
