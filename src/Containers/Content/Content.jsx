@@ -6,6 +6,7 @@ import Footer from '../Footer/Footer';
 
 function Content() {
   const [trendingMovies, setTrendingMovies] = useState([]);
+  const [latestMovies, setLatestMovies] = useState([]);
 
   const [selectedCategory, setSelectedCategory] = useState('movies');
 
@@ -21,6 +22,8 @@ function Content() {
       const url2 =
         'https://api.themoviedb.org/3/trending/tv/day?language=en-US';
 
+      const url3 = 'https://api.themoviedb.org/3/movie/latest';
+
       const options = {
         method: 'GET',
         headers: {
@@ -35,7 +38,8 @@ function Content() {
 
         const response2 = await fetch(url2, options);
 
-        if (!response.ok || !response2.ok) {
+
+        if (!response.ok || !response2.ok ) {
           throw new Error('Network response was not ok');
         }
 
@@ -48,8 +52,8 @@ function Content() {
         };
 
         setTrendingMovies(mergedData);
-        setLoading(false);
         console.log(mergedData);
+        setLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -107,22 +111,7 @@ function Content() {
             <div>
               <h1>latest Movies</h1>
               <div className="recommended-movies-container">
-                <Movies />
-                <Movies />
-                <Movies />
-                <Movies />
-                <Movies />
-                <Movies />
-                <Movies />
-                <Movies />
-                <Movies />
-                <Movies />
-                <Movies />
-                <Movies />
-                <Movies />
-                <Movies />
-                <Movies />
-                <Movies />
+             
               </div>
             </div>
 
