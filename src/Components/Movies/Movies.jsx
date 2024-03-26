@@ -11,7 +11,7 @@ function Movies({ movie }) {
       <div className="Recommended_section_content">
         {movie.poster_path && (
           <img
-            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`     }
             alt={movie.title}
           />
         )}
