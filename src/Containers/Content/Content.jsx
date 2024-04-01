@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from "react";
-import "./Content.css";
-import Movies from "../../Components/Movies/Movies";
-import SideBar from "../../Components/SideBar/SideBar";
-import Footer from "../Footer/Footer";
+import React, { useEffect, useState } from 'react';
+import './Content.css';
+import Movies from '../../Components/Movies/Movies';
+import SideBar from '../../Components/SideBar/SideBar';
+import Footer from '../Footer/Footer';
+import {  useNavigate } from 'react-router-dom';
 
 function Content() {
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [popularMovies, setpopularMovies] = useState([]);
   const [popularTvShow, setpopularTvShow] = useState([]);
 
-  const [selectedCategory, setSelectedCategory] = useState("movies");
+  const [selectedCategory, setSelectedCategory] = useState('movies');
 
   const [loading, setLoading] =
     useState(
@@ -19,25 +20,22 @@ function Content() {
   useEffect(() => {
     const fetchData = async () => {
       const url1 =
-        "https://api.themoviedb.org/3/trending/movie/day?language=en-US";
+        'https://api.themoviedb.org/3/trending/movie/day?language=en-US';
       const url2 =
-        "https://api.themoviedb.org/3/trending/tv/day?language=en-US";
+        'https://api.themoviedb.org/3/trending/tv/day?language=en-US';
 
       const url3 =
-        "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1";
+        'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
 
       const url4 =
-        "https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1";
-
-      const url5 =
-        "https://api.themoviedb.org/3/tv/series_id/season/season_number/videos?language=en-US";
+        'https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1';
 
       const options = {
-        method: "GET",
+        method: 'GET',
         headers: {
-          accept: "application/json",
+          accept: 'application/json',
           Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMDU2ODE0OTNmZTc0MDc5MGY5NjE5YzE4MDUzMWNmMCIsInN1YiI6IjY1ZWEzMGFkNmJlYWVhMDE2Mzc5ODgwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ttUFm77rQ8NzUlRoTSe9q_3rbJTxPttlk7GaT8H9YiE",
+            'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMDU2ODE0OTNmZTc0MDc5MGY5NjE5YzE4MDUzMWNmMCIsInN1YiI6IjY1ZWEzMGFkNmJlYWVhMDE2Mzc5ODgwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ttUFm77rQ8NzUlRoTSe9q_3rbJTxPttlk7GaT8H9YiE',
         },
       };
 
@@ -51,7 +49,7 @@ function Content() {
         const response4 = await fetch(url4, options);
 
         if (!response.ok || !response2.ok || !response3.ok || !response4.ok) {
-          throw new Error("Network response was not ok");
+          throw new Error('Network response was not ok');
         }
 
         const jsonData1 = await response.json();
@@ -74,12 +72,23 @@ function Content() {
 
         setLoading(false);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error('Error fetching data:', error);
       }
     };
 
     fetchData();
   }, []);
+  const Navigate = useNavigate();
+
+  const handleMoviesDetails = (id) => {
+       const selectedMovie = trendingMovies.movies.find(
+         (movie) => movie.id === id
+       );
+       if (selectedMovie) {
+         Navigate(`/ItemDetail`, { state: { movie: selectedMovie } });
+       }
+    console.log(id);
+  };
 
   return (
     <div className="movie-explore-section">
@@ -98,40 +107,59 @@ function Content() {
             <p className="content-container_type">
               <span
                 className={
-                  selectedCategory === "movies"
-                    ? "contentCategorySelected"
-                    : "contentCategory"
+                  selectedCategory === 'movies'
+                    ? 'contentCategorySelected'
+                    : 'contentCategory'
                 }
-                onClick={() => setSelectedCategory("movies")}
+                onClick={() => setSelectedCategory('movies')}
               >
                 Movies
-              </span>{" "}
+              </span>{' '}
               <span
                 className={
-                  selectedCategory === "movies"
-                    ? "contentCategory"
-                    : "contentCategorySelected"
+                  selectedCategory === 'movies'
+                    ? 'contentCategory'
+                    : 'contentCategorySelected'
                 }
-                onClick={() => setSelectedCategory("tvShows")}
+                onClick={() => setSelectedCategory('tvShows')}
               >
                 TV Shows
               </span>
             </p>
+
             <div className="recommended-movies-container">
-              {selectedCategory === "movies"
+              {selectedCategory === 'movies'
                 ? trendingMovies.movies.map((movie) => (
-                    <Movies key={movie.id} movie={movie} />
+                    <div
+                      key={movie.id}
+                      onClick={() => handleMoviesDetails(movie.id)}
+                    >
+                      <Movies key={movie.id} movie={movie} />
+                    </div>
                   ))
                 : trendingMovies.tvShows.map((tvShow) => (
-                    <Movies key={tvShow.id} movie={tvShow} />
+                    <div
+                      key={tvShow.id}
+                      onClick={() => handleMoviesDetails(tvShow.id)}
+                    >
+                      <Movies key={tvShow.id} movie={tvShow} />
+                    </div>
                   ))}
             </div>
 
             <div>
               <h1>top rated Movies</h1>
-              <div className="recommended-movies-container">
-                {popularMovies.results.map((movie) => (
-                  <Movies key={movie.id} movie={movie} />
+              <div
+                onClick={() => handleMoviesDetails(Movies.id)}
+                className="recommended-movies-container"
+              >
+                {popularMovies.results.map((tvShow) => (
+                  <div
+                    key={tvShow.id}
+                    onClick={() => handleMoviesDetails(tvShow.id)}
+                  >
+                    <Movies key={tvShow.id} movie={tvShow} />
+                  </div>
                 ))}
               </div>
             </div>

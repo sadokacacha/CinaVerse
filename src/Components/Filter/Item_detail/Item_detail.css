@@ -48,12 +48,14 @@
   max-width: 1200px;
   height: 100vh;
   margin: 0 auto;
+  color: white;
 }
 
 .detailsContainer {
   display: grid;
   grid-template-columns: 30% 70%;
   position: relative;
+  gap: 90px;
 }
 
 .ItemIMG {
@@ -62,26 +64,29 @@
   border-radius: 15px;
 }
 
-
-
-
-
-
 .ItemContainer_details {
   width: 100%;
   color: var(--Text-color);
 }
+
 .GenereContainer {
-  color: var( --highlight-color);
+  color: var(--highlight-color);
   list-style: none;
   display: flex;
   justify-content: space-between;
   width: 400px;
 }
 .GenereContainer li {
-  background-color:  var(--main-color);
+  background-color: var(--main-color);
   padding: 9px;
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
+  list-style: none;
+  text-decoration: none;
+}
+
+.castIMG li {
+  color: var(--highlight-color);
+  list-style: none;
 }
