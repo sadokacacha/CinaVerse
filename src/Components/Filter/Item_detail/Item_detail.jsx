@@ -76,7 +76,7 @@ function Item_detail() {
               <li> genere3 </li>
               <li> genere4 </li>
             </ul>
-            <p> {movies.overview} </p>
+            <p> {movies.overview}</p>
             <p> {movies.media_type} </p>
             <p> {movies.original_language} </p>
 

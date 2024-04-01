@@ -56,6 +56,7 @@
   grid-template-columns: 30% 70%;
   position: relative;
   gap: 90px;
+
 }
 
 .ItemIMG {
@@ -66,7 +67,8 @@
 
 .ItemContainer_details {
   width: 100%;
-  color: var(--Text-color);
+  color: var(--highlight-color);
+  
 }
 
 .GenereContainer {
@@ -87,6 +89,5 @@
 }
 
 .castIMG li {
-  color: var(--highlight-color);
   list-style: none;
 }

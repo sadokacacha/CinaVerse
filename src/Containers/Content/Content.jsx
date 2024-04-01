@@ -3,7 +3,7 @@ import './Content.css';
 import Movies from '../../Components/Movies/Movies';
 import SideBar from '../../Components/SideBar/SideBar';
 import Footer from '../Footer/Footer';
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Content() {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -81,14 +81,17 @@ function Content() {
   const Navigate = useNavigate();
 
   const handleMoviesDetails = (id) => {
-       const selectedMovie = trendingMovies.movies.find(
-         (movie) => movie.id === id
-       );
-       if (selectedMovie) {
-         Navigate(`/ItemDetail`, { state: { movie: selectedMovie } });
-       }
+    const selectedMovie = trendingMovies.movies.find(
+      (movie) => movie.id === id
+    );
+
+    if (selectedMovie) {
+      Navigate(`/ItemDetail`, { state: { movie: selectedMovie } });
+    }
     console.log(id);
   };
+
+
 
   return (
     <div className="movie-explore-section">
@@ -140,7 +143,7 @@ function Content() {
                 : trendingMovies.tvShows.map((tvShow) => (
                     <div
                       key={tvShow.id}
-                      onClick={() => handleMoviesDetails(tvShow.id)}
+                      onClick={() => handleTvShowsDetails(tvShow.id)}
                     >
                       <Movies key={tvShow.id} movie={tvShow} />
                     </div>
@@ -156,7 +159,7 @@ function Content() {
                 {popularMovies.results.map((tvShow) => (
                   <div
                     key={tvShow.id}
-                    onClick={() => handleMoviesDetails(tvShow.id)}
+                    onClick={() => handleTvShowsDetails(tvShow.id)}
                   >
                     <Movies key={tvShow.id} movie={tvShow} />
                   </div>
