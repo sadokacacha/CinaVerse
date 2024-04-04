@@ -81,17 +81,29 @@ function Content() {
   const Navigate = useNavigate();
 
   const handleMoviesDetails = (id) => {
-    const selectedMovie = trendingMovies.movies.find(
-      (movie) => movie.id === id
-    );
-
+    const selectedMovie =
+      trendingMovies.movies.find((movie) => movie.id === id) ||
+       popularMovies.results.find((movie) => movie.id === id);
     if (selectedMovie) {
-      Navigate(`/ItemDetail`, { state: { movie: selectedMovie } });
+      Navigate(`/ItemDetail`, {
+        state: { movie: selectedMovie },
+      });
     }
     console.log(id);
   };
 
+  const handleTvShowsDetails = (id) => {
+    const selectedTvShow =
+      trendingMovies.tvShows.find((tvShow) => tvShow.id === id) ||
+      popularTvShow.results.find((tvShow) => tvShow.id === id);
 
+    if (selectedTvShow) {
+      Navigate(`/ItemDetail`, {
+        state: { tvShow: selectedTvShow },
+      });
+    }
+    console.log(id);
+  };
 
   return (
     <div className="movie-explore-section">
